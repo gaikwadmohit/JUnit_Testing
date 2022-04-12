@@ -21,6 +21,15 @@ public class UserRegistrationTest {
            assertEquals(result2, true);
 
     }
+   
+    	
+        @Test
+        public void MatchEmailId() {
+           	boolean result3=r.EmailId("mohit16gaikwad@gmail.com");
+           assertEquals(result3, true);
+
+    }
+
 
 
     }
