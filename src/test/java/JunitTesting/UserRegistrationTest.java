@@ -38,6 +38,13 @@ public class UserRegistrationTest {
 
     }
 
+        @Test
+        public void MatchPassward_8_Character() {
+           	boolean result5=r.Passward("abcdefpp123");
+           assertEquals(result5, true);
+
+    }
+
     }
 
     

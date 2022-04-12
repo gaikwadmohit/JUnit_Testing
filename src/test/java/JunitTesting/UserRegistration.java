@@ -52,4 +52,14 @@ public class UserRegistration {
 			return result4;
 		
 	}
+		 // method to check passward with 8 character	
+		public boolean Passward(String testString) {
+			
+			String regex="^[a-z]*[A-Z]*[0-9]*$";
+			Pattern pattern=Pattern.compile(regex);
+			Matcher match=pattern.matcher(testString);
+			boolean result5=match.find();
+			return result5;
+		
+	}
 }
