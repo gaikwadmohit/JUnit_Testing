@@ -83,6 +83,16 @@ public class UserRegistration {
 			return result7;
 }
 
+		// method to check passward with 1 Special character	
+				public boolean Passward1SpecialChar(String testString) {
+					
+					String regex="^[A-Z]{1}[a-z]*[0-9]*$";
+					Pattern pattern=Pattern.compile(regex);
+					Matcher match=pattern.matcher(testString);
+					boolean result8=match.find();
+					return result8;
+		}
+
 }		
 		
 		

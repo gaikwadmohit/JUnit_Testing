@@ -56,6 +56,12 @@ public class UserRegistrationTest {
            assertEquals(result7, true);
 
     }
+        @Test
+        public void MatchPassward_1SpecialChar() {
+           	boolean result8=r.Passward1Numeric("Abcdefoo22123");
+           assertEquals(result8, true);
+
+    }
     }
 
     
