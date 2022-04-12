@@ -1,10 +1,7 @@
 package JunitTesting;
 
-import static org.junit.Assert.assertEquals;
-
-import  org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.Test;
-
 import junit.framework.Assert;
 
 public class UserRegistrationTest {
@@ -12,15 +9,23 @@ public class UserRegistrationTest {
     UserRegistration r = new UserRegistration();
     	
     @Test
-    public void givenFirstName_WhenInFormat_ShouldReturnTrue() {
+    public void MatchFirstName() {
+       	boolean result1=r.firstName("Mohit");
+       	assertEquals(result1,true);
+    }
+        
     	
-    	boolean result=r.firstName("Mohit");
-        Assert.assertEquals(result, true);
+        @Test
+        public void MatchLastName() {
+           	boolean result2=r.LastName("Gaikwad");
+           assertEquals(result2, true);
 
     }
 
+
     }
 
+    
 
 
 

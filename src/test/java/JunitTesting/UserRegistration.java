@@ -13,11 +13,23 @@ public class UserRegistration {
 		String regex="^[A-Z]{1}[a-z]*";
 		Pattern pattern=Pattern.compile(regex);
 		Matcher match=pattern.matcher(testString);
-		boolean result=match.find();
-		return result;
+		boolean result1=match.find();
+		return result1;
 	
 
 	}
 
-}
+	 // method to check last name
 	
+	public boolean LastName(String testString) {
+		
+		String regex="^[A-Z]{1}[a-z]*";
+		Pattern pattern=Pattern.compile(regex);
+		Matcher match=pattern.matcher(testString);
+		boolean result2=match.find();
+		return result2;
+	
+}
+
+	 
+}
