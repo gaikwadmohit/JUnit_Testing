@@ -70,8 +70,24 @@ public class UserRegistration {
 			Matcher match=pattern.matcher(testString);
 			boolean result6=match.find();
 			return result6;
-		
-			
-		
+					
 	}
+
+		 // method to check passward with 1 Numeric character	
+		public boolean Passward1Numeric(String testString) {
+			
+			String regex="^[A-Z]{1}[a-z]*[0-9]*$";
+			Pattern pattern=Pattern.compile(regex);
+			Matcher match=pattern.matcher(testString);
+			boolean result7=match.find();
+			return result7;
 }
+
+}		
+		
+		
+		
+		
+		
+		
+		
