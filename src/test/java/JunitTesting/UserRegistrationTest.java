@@ -31,6 +31,12 @@ public class UserRegistrationTest {
     }
 
 
+        @Test
+        public void MatchMobileNumber() {
+           	boolean result4=r.MobileNumber("91 858529645");
+           assertEquals(result4, true);
+
+    }
 
     }
 

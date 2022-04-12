@@ -32,8 +32,7 @@ public class UserRegistration {
 }
 
 
-	 // method to check last name
-	
+	 // method to check EmailId	
 	public boolean EmailId(String testString) {
 		
 		String regex="^[a-z]*[0-9]*[a-z]*[@][a-z]*\\.[a-z]*$";
@@ -43,4 +42,14 @@ public class UserRegistration {
 		return result3;
 	
 }
+	 // method to check MobileNumber	
+		public boolean MobileNumber(String testString) {
+			
+			String regex="^[0-9]{2}\\s[0-9]*$";
+			Pattern pattern=Pattern.compile(regex);
+			Matcher match=pattern.matcher(testString);
+			boolean result4=match.find();
+			return result4;
+		
+	}
 }
