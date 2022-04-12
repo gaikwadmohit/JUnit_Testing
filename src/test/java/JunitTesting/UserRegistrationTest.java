@@ -44,7 +44,12 @@ public class UserRegistrationTest {
            assertEquals(result5, true);
 
     }
+        @Test
+        public void MatchPassward_1Uppercase() {
+           	boolean result6=r.Passward1UC("Abcdefoo");
+           assertEquals(result6, true);
 
+    }
     }
 
     
