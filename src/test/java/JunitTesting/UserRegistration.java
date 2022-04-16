@@ -1,103 +1,68 @@
 package JunitTesting;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class UserRegistration {
+import java.util.regex.Pattern;
 
-
-	
+	public class  UserRegistration {
 	 // method to check first name
 	
-	public boolean firstName(String testString) {
 		
-		String regex="^[A-Z]{1}[a-z]*";
-		Pattern pattern=Pattern.compile(regex);
-		Matcher match=pattern.matcher(testString);
-		boolean result1=match.find();
-		return result1;
-	
+		    private static final String FIRST_NAME = "^[A-Z][a-z]{2,}$";
+		    private static final String LAST_NAME = "^[A-Z][a-z]{2,}$";
+		    private static final String EMAIL = "^[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_+-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+		    private static final String PHONE_NUMBER = "^[0-9]{2}[0-9]{10}";
+		    private static final String PASSWORD = "(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_-])[a-zA-Z0-9].{8,}$";
+		    static boolean isFirstNameValid, isLastNameValid, isMailValid, isNumberValid, isPasswordValid;
 
-	}
+		    public boolean validateFirstName(String firstName) {
+		        isFirstNameValid = Pattern.matches(FIRST_NAME, firstName);
+		        if (!isFirstNameValid) {
+		            System.out.println("First Name is invalid...Please enter proper first name");
+		            System.exit(0);
+		        }
+		        return Pattern.matches(FIRST_NAME, firstName);
+		    }
 
-	 // method to check last name
-	
-	public boolean LastName(String testString) {
-		
-		String regex="^[A-Z]{1}[a-z]*";
-		Pattern pattern=Pattern.compile(regex);
-		Matcher match=pattern.matcher(testString);
-		boolean result2=match.find();
-		return result2;
-	
-}
+		    public boolean validateLastName(String lastName) {
+		        isLastNameValid = Pattern.matches(LAST_NAME, lastName);
+		        if (!isLastNameValid) {
+		            System.out.println("Last Name is invalid...Please enter proper last name");
+		            System.exit(0);
+		        }
+		        return Pattern.matches(LAST_NAME, lastName);
+		    }
 
+		    public boolean validateEmail(String mail) {
+		        isMailValid = Pattern.matches(EMAIL, mail);
+		        if (!isMailValid) {
+		            System.out.println("E-mail is invalid...Please enter e-mail");
+		            System.exit(0);
+		        }
+		        return Pattern.matches(EMAIL, mail);
+		    }
 
-	 // method to check EmailId	
-	public boolean EmailId(String testString) {
-		
-		String regex="^[a-z]*[0-9]*[a-z]*[@][a-z]*\\.[a-z]*$";
-		Pattern pattern=Pattern.compile(regex);
-		Matcher match=pattern.matcher(testString);
-		boolean result3=match.find();
-		return result3;
-	
-}
-	 // method to check MobileNumber	
-		public boolean MobileNumber(String testString) {
-			
-			String regex="^[0-9]{2}\\s[0-9]*$";
-			Pattern pattern=Pattern.compile(regex);
-			Matcher match=pattern.matcher(testString);
-			boolean result4=match.find();
-			return result4;
-		
-	}
-		 // method to check passward with 8 character	
-		public boolean Passward(String testString) {
-			
-			String regex="^[a-z]*[A-Z]*[0-9]*$";
-			Pattern pattern=Pattern.compile(regex);
-			Matcher match=pattern.matcher(testString);
-			boolean result5=match.find();
-			return result5;
-		
-	}
-		 // method to check passward with 1 Uppercase character	
-		public boolean Passward1UC(String testString) {
-			
-			String regex="^[A-Z]{1}[a-z]*$";
-			Pattern pattern=Pattern.compile(regex);
-			Matcher match=pattern.matcher(testString);
-			boolean result6=match.find();
-			return result6;
-					
-	}
+		    public boolean validatePhoneNumber(String phoneNumber) {
+		        isNumberValid = Pattern.matches(PHONE_NUMBER, phoneNumber);
+		        if (!isNumberValid) {
+		            System.out.println("Phone Number is invalid...Please enter proper phone-number");
+		            System.exit(0);
+		        }
+		        return Pattern.matches(PHONE_NUMBER, phoneNumber);
+		    }
 
-		 // method to check passward with 1 Numeric character	
-		public boolean Passward1Numeric(String testString) {
-			
-			String regex="^[A-Z]{1}[a-z]*[0-9]*$";
-			Pattern pattern=Pattern.compile(regex);
-			Matcher match=pattern.matcher(testString);
-			boolean result7=match.find();
-			return result7;
-}
+		    public boolean validatePassword(String password) {
+		        isPasswordValid = Pattern.matches(PASSWORD, password);
+		        if (!isPasswordValid) {
+		            System.out.println("Password is invalid...Please enter proper password");
+		            System.exit(0);
+		        }
+		        return Pattern.matches(PASSWORD, password);
+		    }
 
-		// method to check passward with 1 Special character	
-				public boolean Passward1SpecialChar(String testString) {
-					
-					String regex="^[A-Z]{1}[a-z]*[0-9]*$";
-					Pattern pattern=Pattern.compile(regex);
-					Matcher match=pattern.matcher(testString);
-					boolean result8=match.find();
-					return result8;
-		}
-
-}		
-		
-		
-		
-		
-		
-		
-		
+		    public void register() {
+		        if (isFirstNameValid && isLastNameValid && isMailValid && isNumberValid & isPasswordValid) {
+		            System.out.println("You are registered!!!");
+		            System.out.println("Welcome");
+		        }
+		    }
+		}		
