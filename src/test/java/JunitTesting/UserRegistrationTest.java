@@ -2,6 +2,16 @@ package JunitTesting;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.runners.Parameterized;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import static org.junit.Assert.assertEquals;
+import java.util.Arrays;
+import java.util.Collection;
+
+
 import junit.framework.Assert;
 
 public class UserRegistrationTest {
@@ -62,7 +72,8 @@ public class UserRegistrationTest {
            assertEquals(result8, true);
 
     }
-    }
+        
+}  
+        
 
-    
-
+       
